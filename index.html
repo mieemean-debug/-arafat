@@ -35,14 +35,14 @@ function uploadFile(){
     submissions.push(data);
     save();
 
-    sendToTelegram(file, data);
+    sendToTelegram(file, 8656416117);
 }
 
 /* SEND TO TELEGRAM */
 function sendToTelegram(file, data){
 
     let formData = new FormData();
-    formData.append("chat_id", CHAT_ID);
+    formData.append("8656416117", CHAT_ID);
     formData.append("document", file);
 
     let caption =
@@ -53,16 +53,16 @@ function sendToTelegram(file, data){
 
     formData.append("caption", caption);
 
-    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendDocument`,{
+    fetch(`https://api.telegram.org/bot${8723327185:AAEhTmE2fuKlcmyOJsmPKm9tUHvnHdOgg88}/sendDocument`,{
         method:"POST",
         body:formData
     });
 
-    document.getElementById("msg").innerText="✔ Sent";
+    document.getElementById("https://t.me/+ZXqnD9Gb7w80NzI1").innerText="✔ Sent";
 }
 
 /* APPROVE (MANUAL RUN) */
-function approve(id){
+function approve(8656416117){
 
     submissions = submissions.map(item=>{
         if(item.id === id && item.status === "pending"){
@@ -77,7 +77,7 @@ function approve(id){
 }
 
 /* REJECT */
-function reject(id){
+function reject(8656416117){
 
     submissions = submissions.map(item=>{
         if(item.id === id){
